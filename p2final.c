@@ -3,13 +3,12 @@ struct _fraction
 {
   int num,den;
 };
-typedef _fraction fraction
-fraction;
+typedef struct _fraction fraction;
 fraction input_fraction()
 {
   fraction f;
   printf("enter the fraction\n");
-  scanf("%d %d\n",&f);
+  scanf("%d %d",&f.num,&f.den);
   return f;
 }
 fraction Largest_fraction(fraction f1, fraction f2, fraction f3)
@@ -41,7 +40,7 @@ int main()
   f1=input_fraction();
   f2=input_fraction();
   f3=input_fraction();
-  largest=largest_fraction(f1,f2,f3);
-  output(largest);
+  largest=Largest_fraction(f1,f2,f3);
+  output(f1,f2,f3,largest);
   return 0;
 }
