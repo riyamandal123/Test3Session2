@@ -1,1 +1,49 @@
 
+Breakpoint 1, main () at p4final.c:47
+47  {
+(gdb) n
+50      n=input_degree();
+(gdb) n
+Enter the degree of the polynomial
+2
+51      x=input_x();
+(gdb) n
+Enter the value of x
+3
+52      float a[n];
+(gdb) n
+53      input_coefficients(n,a);
+(gdb) n
+Enter the 1 coefficients of x
+1
+Enter the 2 coefficients of x
+2
+Enter the 3 coefficients of x
+4
+54      result=evaluate_polynomial(n,a,x);
+(gdb) n
+55      output(n,a,x,result);
+(gdb) s
+output (n=2, a=0x7ffca000ad40, x=3, result=19) at p4final.c:38
+38        printf("The value of ");
+(gdb) n
+39      for(int i=0;i<n;i++)
+(gdb) n
+41          printf("%.0f +",a[i]);
+(gdb) n
+39      for(int i=0;i<n;i++)
+(gdb) n
+41          printf("%.0f +",a[i]);
+(gdb) n
+39      for(int i=0;i<n;i++)
+(gdb) n
+43      printf("%.0f",a[n]);
+(gdb) n
+44      printf("is %.2f",result);
+(gdb) n
+45  }
+(gdb) n
+main () at p4final.c:56
+56      return 0;
+(gdb) n
+57  }(gdb) 
