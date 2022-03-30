@@ -1,1 +1,39 @@
-
+Breakpoint 1, main () at p7final.c:37
+37  {
+(gdb) n
+39    input_fraction(&f1,&f2);
+(gdb) n
+enter the numerator and denomenator
+3
+5
+6
+8
+40    add_fractions(f1,f2,&f3);
+(gdb) s
+add_fractions (f1=..., f2=..., f3=0x7fff6a3f1720) at p7final.c:25
+25   f3->den=f1.den*f2.den;
+(gdb) n
+26    f3->num=f1.num*f2.den+f2.num*f1.den;
+(gdb) n
+27    int gcd=find_gcd(f3->num,f3->den);
+(gdb) n
+28    f3->num=f3->num/gcd;
+(gdb) n
+29    f3->den=f3->den/gcd;
+(gdb) n
+30  }
+(gdb) n
+main () at p7final.c:41
+41    output(f1,f2,f3);
+(gdb) s
+output (f1=..., f2=..., f3=...) at p7final.c:33
+33    printf("sum of %d/%d and %d/%d is %d/%d\n",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den);
+(gdb) n
+sum of 3/5 and 6/8 is 27/20
+34  }
+(gdb) n
+main () at p7final.c:42
+42    return 0;  
+(gdb) n
+43  }
+(gdb) 

@@ -25,7 +25,7 @@ void input_n_fractions(int n,Fraction f[n])
         f[i] = input_fraction();
   }
 }
-fraction add_fractions(fraction *f1,fraction *f2)
+Fraction add_fractions(Fraction *f1,Fraction *f2)
 {
  f3->den3=f1.den+f2.den;
   f3->num3=f1.num*f2.den+f2.num*f1.den;
@@ -33,21 +33,28 @@ fraction add_fractions(fraction *f1,fraction *f2)
   f3->num=f3->num/gcd;
   f3->den=f3->den/gcd;
 }
-void output(Fraction f1, Fraction f2, Fraction f3, Fraction sum)
-{
-  printf("sum of %d /%d and %d/%d is%d/%d\n",f1.num,f1.den,f2.num,f2.den,sum.num,sum.den);
-}
 Fraction add_n_fractions(int n,Fraction f[n])
 {
   Fraction sum;
   for(int i=0;i<n;i++)
   {
-        sum = add_fractions(sum,f[i])
+        sum = add_fractions(sum,f[i]);
   }
   return sum;
 }
+void output(Fraction f1, Fraction f2, Fraction f3)
+{
+  printf("sum of %d /%d and %d/%d is %d/%d\n",f1.num,f1.den,f2.num,f2.den);
+}
+
 int main()
 {
-  
+   Fraction f1,f2,f3,sum;
+  input_fraction(&f1,&f2);
+  add_fractions(f1,f2,&f3);
+  Fraction f[n];
+  sum=add_n_fractions(n,f);
+  output(f1,f2,f3);
+  return 0; 
 }
 
