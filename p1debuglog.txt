@@ -1,1 +1,38 @@
 
+Breakpoint 1, main () at p1final.c:23
+23  {
+(gdb) n
+25    input(&num1,&num2,&den1,&den2);
+(gdb) n
+enter  1st numerator
+3
+enter 1st denomenator
+4
+enter 2nd numerator
+5
+enter 2nd denomerator
+7
+26    add(num1,num2,den1,den2,&num3,&den3);
+(gdb) s
+add (num1=3, den1=4, num2=5, den2=7, num3=0x7ffc2eafe850, den3=0x7ffc2eafe854)
+    at p1final.c:15
+15    *num3=num1*den2+num2*den1;
+(gdb) n
+16    *den3=den1*den2;
+(gdb) n
+17  }
+(gdb) n
+main () at p1final.c:27
+27    output(num1,num2,den1,den2,num3,den3);
+(gdb) s
+output (num1=3, den1=4, num2=5, den2=7, num3=41, den3=28) at p1final.c:20
+20    printf("sum of 2 fractions is %d/%d\n",num3,den3);
+(gdb) n
+sum of 2 fractions is 41/28
+21  }
+(gdb) n
+main () at p1final.c:28
+28    return 0;  
+(gdb) n
+29  }
+(gdb) 
