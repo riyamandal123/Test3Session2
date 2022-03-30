@@ -1,1 +1,60 @@
 
+Breakpoint 1, main () at p6final.c:25
+25  {
+(gdb) n
+28      input_string(a);
+(gdb) n
+Enter the sentence
+my name is riya
+29      n=count_words(a);
+(gdb) s
+count_words (a=0x7ffd4e6800b0 "my name is riya\n") at p6final.c:10
+10      int i=0;
+(gdb) n
+11      char *temp=strtok(a," ");
+(gdb) n
+12      while(temp!=NULL)
+(gdb) n
+14          i=i+1;
+(gdb) n
+15          temp=strtok(NULL," ");
+(gdb) n
+12      while(temp!=NULL)
+(gdb) n
+14          i=i+1;
+(gdb) n
+15          temp=strtok(NULL," ");
+(gdb) n
+12      while(temp!=NULL)
+(gdb) n
+14          i=i+1;
+(gdb) n
+15          temp=strtok(NULL," ");
+(gdb) n
+12      while(temp!=NULL)
+(gdb) n
+14          i=i+1;
+(gdb) n
+15          temp=strtok(NULL," ");
+(gdb) n
+12      while(temp!=NULL)
+(gdb) n
+17      printf("%d\n",i);
+(gdb) n
+4
+18      return i;
+(gdb) n
+19  }
+(gdb) n
+main () at p6final.c:30
+30      output(a,n);
+(gdb) s
+output (a=0x7ffd4e6800b0 "my", no_of_words=4) at p6final.c:22
+22      printf("The sentence has %d words",no_of_words);
+(gdb) n
+23  }
+(gdb) n
+main () at p6final.c:31
+31      return 0;
+(gdb) n
+32  }

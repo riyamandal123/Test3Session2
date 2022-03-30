@@ -1,24 +1,32 @@
 #include<stdio.h>
 #include<string.h>
-void input_string(char *a)
+void input_string(char a[])
 {
-  printf("enter the string\n");
-  scanf("%s",a);
+    printf("Enter the sentence\n");
+    fgets(a,100,stdin);
 }
-int count_words(char *string)
+int count_words(char a[])
 {
-  int string;
-  for(int i=0;i<n;i++)
+    int i=0;
+    char *temp=strtok(a," ");
+    while(temp!=NULL)
     {
-      n=
+        i=i+1;
+        temp=strtok(NULL," ");
     }
-  
+    printf("%d\n",i);
+    return i;
 }
-
-// hi my name is shreyas
-// himynameisshreyas
-
-void output(char *string, int no_words)
+void output(char a[],int no_of_words)
 {
-  printf("")
+    printf("The sentence has %d words",no_of_words);
+}
+int main()
+{
+    int n;
+    char a[100];
+    input_string(a);
+    n=count_words(a);
+    output(a,n);
+    return 0;
 }
