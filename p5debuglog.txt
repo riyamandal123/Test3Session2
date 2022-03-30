@@ -1,1 +1,58 @@
 
+Breakpoint 1, main () at p5final.c:35
+35  {
+(gdb) n
+37    n=input_size();
+(gdb) n
+enter the array size
+3
+38    int a[n];
+(gdb) n
+39    input_array(n,a);
+(gdb) n
+enter the elements of the input array
+4
+enter the elements of the input array
+5
+enter the elements of the input array
+6
+40    largest=find_largest(n,a);
+(gdb) s
+find_largest (n=3, a=0x7fff1d2234c0) at p5final.c:20
+20    int i, largest=0;
+(gdb) n
+21    for(int i=0;i<n;i++)
+(gdb) n
+23      if(a[i]>a[largest])
+(gdb) n
+21    for(int i=0;i<n;i++)
+(gdb) n
+23      if(a[i]>a[largest])
+(gdb) n
+25         largest=i;
+(gdb) n
+21    for(int i=0;i<n;i++)
+(gdb) n
+23      if(a[i]>a[largest])
+(gdb) n
+25         largest=i;
+(gdb) n
+21    for(int i=0;i<n;i++)
+(gdb) n
+28       return largest;
+(gdb) n
+29  }
+(gdb) n
+main () at p5final.c:41
+41    out_put(n,a,largest);
+(gdb) s
+out_put (n=3, a=0x7fff1d2234c0, largest=2) at p5final.c:32
+32    printf("the index of the largest number %d in an array is %d\n",largest,a[largest]);
+(gdb) n
+the index of the largest number 2 in an array is 6
+33  }
+(gdb) n
+main () at p5final.c:42
+42    return 0;  
+(gdb) n
+43  }(gdb) 
