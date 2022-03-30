@@ -1,1 +1,49 @@
 
+Breakpoint 1, main () at p2final.c:40
+40    f1=input_fraction();
+(gdb) n
+enter the fraction
+3
+4
+41    f2=input_fraction();
+(gdb) n
+enter the fraction
+4
+6
+42    f3=input_fraction();
+(gdb) n
+enter the fraction
+7
+8
+43    largest=Largest_fraction(f1,f2,f3);
+(gdb) s
+Largest_fraction (f1=..., f2=..., f3=...) at p2final.c:16
+16   int sden = f1.den * f2.den * f3.den;
+(gdb) n
+18    a = f1.num * sden/f1.den;
+(gdb) n
+19    b = f2.num * sden/f2.den;
+(gdb) n
+20    c = f3.num * sden/f3.den;
+(gdb) n
+21    if( a>b && a>c)
+(gdb) n
+25    else if(b>c)
+(gdb) n
+30      return f3;
+(gdb) n
+32  }
+(gdb) n
+main () at p2final.c:44
+44    output(f1,f2,f3,largest);
+(gdb) s
+output (f1=..., f2=..., f3=..., largest=...) at p2final.c:35
+35    printf("the smallest of three fraction is %d/%d\n",largest.num,largest.den);
+(gdb) n
+the smallest of three fraction is 7/8
+36  }
+(gdb) n
+main () at p2final.c:45
+45    return 0;
+(gdb) n
+46  }(gdb) 
